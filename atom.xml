@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>weinull</title>
-  <icon>https://blog.weinull.com/icon.png</icon>
+  <icon>https://weinull.com/icon.png</icon>
   <subtitle> </subtitle>
-  <link href="https://blog.weinull.com/atom.xml" rel="self"/>
+  <link href="https://weinull.com/atom.xml" rel="self"/>
   
-  <link href="https://blog.weinull.com/"/>
+  <link href="https://weinull.com/"/>
   <updated>2021-08-31T16:00:00.000Z</updated>
-  <id>https://blog.weinull.com/</id>
+  <id>https://weinull.com/</id>
   
   <author>
     <name>weinull</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>启航</title>
-    <link href="https://blog.weinull.com/2021/09/01/index/"/>
-    <id>https://blog.weinull.com/2021/09/01/index/</id>
+    <link href="https://weinull.com/2021/09/01/index/"/>
+    <id>https://weinull.com/2021/09/01/index/</id>
     <published>2021-08-31T16:00:00.000Z</published>
     <updated>2021-08-31T16:00:00.000Z</updated>
     
