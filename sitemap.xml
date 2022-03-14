@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://weinull.com/2022/03/14/post_2022-001/</loc>
+    
+    <lastmod>2022-03-13</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://weinull.com/tags/index.html</loc>
     
     <lastmod>2021-09-08</lastmod>
@@ -38,6 +45,20 @@
   </url>
 
   
+  <url>
+    <loc>https://weinull.com/tags/%E8%BD%AF%E8%B7%AF%E7%94%B1-Openwrt/</loc>
+    <lastmod>2022-03-14</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
 
+  
+  <url>
+    <loc>https://weinull.com/categories/%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2/</loc>
+    <lastmod>2022-03-14</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
   
 </urlset>

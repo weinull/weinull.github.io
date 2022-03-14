@@ -5,4 +5,32 @@
     <url>/2021/09/01/index/</url>
     <content><![CDATA[]]></content>
   </entry>
+  <entry>
+    <title>Openwrt软路由安装</title>
+    <url>/2022/03/14/post_2022-001/</url>
+    <content><![CDATA[<h1 id="Openwrt软路由安装"><a href="#Openwrt软路由安装" class="headerlink" title="Openwrt软路由安装"></a>Openwrt软路由安装</h1><p>[TOC]</p>
+<h2 id="系统安装"><a href="#系统安装" class="headerlink" title="系统安装"></a>系统安装</h2><h3 id="虚拟机安装"><a href="#虚拟机安装" class="headerlink" title="虚拟机安装"></a>虚拟机安装</h3><p><strong>安装准备：</strong></p>
+<ul>
+<li>PE镜像（老毛桃PE或者其他带桌面的PE镜像，桌面比较方便，命令行也行，这里只说明桌面版本）</li>
+<li>软路由img镜像（<a href="https://op.supes.top/firmware/x86_64/">OpenWRT</a>，使用iso工具直接放入PE镜像中或者网络下载）</li>
+<li>img写盘工具（推荐<a href="https://m0n0.ch/wall/physdiskwrite.php">physdiskwrite</a>，使用iso工具直接放入PE镜像中或者网络下载）</li>
+</ul>
+<p><strong>安装步骤：</strong></p>
+<ol>
+<li>配置虚拟机为2C4G 2G硬盘（注意硬盘类型需改为SATA或者IDE模式，引导改为EFI，内存配置太低可能PE桌面系统启动不了，如果要使用网络需调整网卡类型，不同PE系统支持的网卡驱动不相同）。</li>
+<li>挂载PE系统iso文件启动虚拟机并进入桌面。</li>
+<li>找到<strong>physdiskwrite</strong>以及img镜像（或者网络下载到PE系统本地）。</li>
+<li>打开<strong>cmd</strong>使用<strong>physdiskwrite</strong>工具把软路由img镜像写入硬盘（写入时会选择硬盘，选择我们添加的2G硬盘即可）。 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">physdiskwrite.exe -u xxxx.img</span><br></pre></td></tr></table></figure>
+</li>
+<li>关机，修改虚拟机配置为1C1G，引导修改为BIOS即可（一般都够用，或者2C2G也行）。</li>
+<li> 开机使用默认口令root/root登录即可，后续就根据自己需求配置。</li>
+</ol>
+]]></content>
+      <categories>
+        <category>环境部署</category>
+      </categories>
+      <tags>
+        <tag>软路由 Openwrt</tag>
+      </tags>
+  </entry>
 </search>

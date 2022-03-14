@@ -215,6 +215,103 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://weinull.com/2022/03/14/post_2022-001/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="weinull">
+      <meta itemprop="description" content="记录与分享">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="weinull">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/03/14/post_2022-001/" class="post-title-link" itemprop="url">Openwrt软路由安装</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-03-14 00:00:00" itemprop="dateCreated datePublished" datetime="2022-03-14T00:00:00+08:00">2022-03-14</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2/" itemprop="url" rel="index"><span itemprop="name">环境部署</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>491</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="Openwrt软路由安装"><a href="#Openwrt软路由安装" class="headerlink" title="Openwrt软路由安装"></a>Openwrt软路由安装</h1><p>[TOC]</p>
+<h2 id="系统安装"><a href="#系统安装" class="headerlink" title="系统安装"></a>系统安装</h2><h3 id="虚拟机安装"><a href="#虚拟机安装" class="headerlink" title="虚拟机安装"></a>虚拟机安装</h3><p><strong>安装准备：</strong></p>
+<ul>
+<li>PE镜像（老毛桃PE或者其他带桌面的PE镜像，桌面比较方便，命令行也行，这里只说明桌面版本）</li>
+<li>软路由img镜像（<a target="_blank" rel="noopener" href="https://op.supes.top/firmware/x86_64/">OpenWRT</a>，使用iso工具直接放入PE镜像中或者网络下载）</li>
+<li>img写盘工具（推荐<a target="_blank" rel="noopener" href="https://m0n0.ch/wall/physdiskwrite.php">physdiskwrite</a>，使用iso工具直接放入PE镜像中或者网络下载）</li>
+</ul>
+<p><strong>安装步骤：</strong></p>
+<ol>
+<li>配置虚拟机为2C4G 2G硬盘（注意硬盘类型需改为SATA或者IDE模式，引导改为EFI，内存配置太低可能PE桌面系统启动不了，如果要使用网络需调整网卡类型，不同PE系统支持的网卡驱动不相同）。</li>
+<li>挂载PE系统iso文件启动虚拟机并进入桌面。</li>
+<li>找到<strong>physdiskwrite</strong>以及img镜像（或者网络下载到PE系统本地）。</li>
+<li>打开<strong>cmd</strong>使用<strong>physdiskwrite</strong>工具把软路由img镜像写入硬盘（写入时会选择硬盘，选择我们添加的2G硬盘即可）。 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">physdiskwrite.exe -u xxxx.img</span><br></pre></td></tr></table></figure>
+</li>
+<li>关机，修改虚拟机配置为1C1G，引导修改为BIOS即可（一般都够用，或者2C2G也行）。</li>
+<li> 开机使用默认口令root/root登录即可，后续就根据自己需求配置。</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://weinull.com/2021/09/01/index/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -350,9 +447,21 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">1</span>
+          <span class="site-state-item-count">2</span>
           <span class="site-state-item-name">日志</span>
         </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
 </div>
