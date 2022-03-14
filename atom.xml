@@ -28,8 +28,7 @@
       
         
         
-    <summary type="html">&lt;h1 id=&quot;Openwrt软路由安装&quot;&gt;&lt;a href=&quot;#Openwrt软路由安装&quot; class=&quot;headerlink&quot; title=&quot;Openwrt软路由安装&quot;&gt;&lt;/a&gt;Openwrt软路由安装&lt;/h1&gt;&lt;p&gt;[TOC]&lt;/p&gt;
-&lt;h2 id=&quot;系统安装&quot;&gt;&lt;a</summary>
+    <summary type="html">&lt;h2 id=&quot;系统安装&quot;&gt;&lt;a href=&quot;#系统安装&quot; class=&quot;headerlink&quot; title=&quot;系统安装&quot;&gt;&lt;/a&gt;系统安装&lt;/h2&gt;&lt;h3 id=&quot;虚拟机安装&quot;&gt;&lt;a href=&quot;#虚拟机安装&quot; class=&quot;headerlink&quot;</summary>
         
       
     
@@ -41,6 +40,31 @@
     <category term="软路由" scheme="https://weinull.com/tags/%E8%BD%AF%E8%B7%AF%E7%94%B1/"/>
     
     <category term="Openwrt" scheme="https://weinull.com/tags/Openwrt/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux根目录扩容</title>
+    <link href="https://weinull.com/2022/03/14/post_2022-002/"/>
+    <id>https://weinull.com/2022/03/14/post_2022-002/</id>
+    <published>2022-03-13T16:00:00.000Z</published>
+    <updated>2022-03-13T16:00:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;普通磁盘模式&quot;&gt;&lt;a href=&quot;#普通磁盘模式&quot; class=&quot;headerlink&quot; title=&quot;普通磁盘模式&quot;&gt;&lt;/a&gt;普通磁盘模式&lt;/h2&gt;&lt;h3 id=&quot;参考链接&quot;&gt;&lt;a href=&quot;#参考链接&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="环境部署" scheme="https://weinull.com/categories/%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2/"/>
+    
+    
+    <category term="Linux" scheme="https://weinull.com/tags/Linux/"/>
     
   </entry>
   

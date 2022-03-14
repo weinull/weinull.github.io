@@ -257,7 +257,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>491</span>
+              <span>504</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -276,11 +276,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="Openwrt软路由安装"><a href="#Openwrt软路由安装" class="headerlink" title="Openwrt软路由安装"></a>Openwrt软路由安装</h1><p>[TOC]</p>
-<h2 id="系统安装"><a href="#系统安装" class="headerlink" title="系统安装"></a>系统安装</h2><h3 id="虚拟机安装"><a href="#虚拟机安装" class="headerlink" title="虚拟机安装"></a>虚拟机安装</h3><p><strong>安装准备：</strong></p>
+          <h2 id="系统安装"><a href="#系统安装" class="headerlink" title="系统安装"></a>系统安装</h2><h3 id="虚拟机安装"><a href="#虚拟机安装" class="headerlink" title="虚拟机安装"></a>虚拟机安装</h3><p><strong>安装准备：</strong></p>
 <ul>
 <li>PE镜像（老毛桃PE或者其他带桌面的PE镜像，桌面比较方便，命令行也行，这里只说明桌面版本）</li>
-<li>软路由img镜像（<a target="_blank" rel="noopener" href="https://op.supes.top/firmware/x86_64/">OpenWRT</a>，使用iso工具直接放入PE镜像中或者网络下载）</li>
+<li>软路由img镜像（<a target="_blank" rel="noopener" href="https://op.supes.top/firmware/x86_64/">OpenWRT</a>，默认使用EFI，非EFI也可以，使用iso工具直接放入PE镜像中或者网络下载）</li>
 <li>img写盘工具（推荐<a target="_blank" rel="noopener" href="https://m0n0.ch/wall/physdiskwrite.php">physdiskwrite</a>，使用iso工具直接放入PE镜像中或者网络下载）</li>
 </ul>
 <p><strong>安装步骤：</strong></p>
@@ -290,10 +289,104 @@
 <li>找到<strong>physdiskwrite</strong>以及img镜像（或者网络下载到PE系统本地）。</li>
 <li>打开<strong>cmd</strong>使用<strong>physdiskwrite</strong>工具把软路由img镜像写入硬盘（写入时会选择硬盘，选择我们添加的2G硬盘即可）。 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">physdiskwrite.exe -u xxxx.img</span><br></pre></td></tr></table></figure>
 </li>
-<li>关机，修改虚拟机配置为1C1G，引导修改为BIOS即可（一般都够用，或者2C2G也行）。</li>
+<li>关机，修改虚拟机配置为1C1G，如果使用的非EFI影响则需要引导修改为BIOS即可（一般都够用，或者2C4G也行）。</li>
 <li> 开机使用默认口令root/root登录即可，后续就根据自己需求配置。</li>
 </ol>
 
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://weinull.com/2022/03/14/post_2022-002/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="weinull">
+      <meta itemprop="description" content="记录与分享">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="weinull">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/03/14/post_2022-002/" class="post-title-link" itemprop="url">Linux根目录扩容</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-03-14 00:00:00" itemprop="dateCreated datePublished" datetime="2022-03-14T00:00:00+08:00">2022-03-14</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2/" itemprop="url" rel="index"><span itemprop="name">环境部署</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>2.9k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>3 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="普通磁盘模式"><a href="#普通磁盘模式" class="headerlink" title="普通磁盘模式"></a>普通磁盘模式</h2><h3 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h3><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/xwmrqqq/article/details/109828166">https://blog.csdn.net/xwmrqqq/article/details/109828166</a></p>
+<h3 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h3><ol>
+<li>关闭虚机，创建快照（以防万一出问题可以还原）。</li>
+<li>直接在虚机平台调整Linux虚机硬盘大小（调整后开机）。</li>
+<li>切换到root用户（sudo操作命令也可以，直接使用root方便一点）。</li>
+<li>输入 <strong>fdisk -l</strong> 命令查看现有分区以及检查调整的硬盘大小是否已正常显示。 注意：这里会有一个GPT的告警，大概意思就是说分区表的大小不在硬盘的最后（因为我们扩充了硬盘）。 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">GPT PMBR size mismatch (125829119 != 419430399) will be corrected by write.</span><br><span class="line">Disk /dev/sda: 200 GiB, 214748364800 bytes, 419430400 sectors</span><br><span class="line">Disk model: Virtual disk    </span><br><span class="line">Units: sectors of 1 * 512 = 512 bytes</span><br><span class="line">Sector size (logical/physical): 512 bytes / 512 bytes</span><br><span class="line">I/O size (minimum/optimal): 512 bytes / 512 bytes</span><br><span class="line">Disklabel <span class="built_in">type</span>: gpt</span><br><span class="line">Disk identifier: B1D5268C-61B9-4C12-B04D-CB42CCD09229</span><br><span class="line"></span><br><span class="line">Device     Start       End   Sectors Size Type</span><br><span class="line">/dev/sda1   2048      4095      2048   1M BIOS boot</span><br><span class="line">/dev/sda2   4096 125827071 125822976  60G Linux filesystem</span><br></pre></td></tr></table></figure>
+</li>
+<li>输入 <strong>fdisk /dev/sda</strong> 命令开始调整分区（这里根据调整的硬盘进行修改，这里调整的是/dev/sda硬盘的大小）。 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line">root@k8s-node-01:~<span class="comment"># fdisk /dev/sda</span></span><br><span class="line"></span><br><span class="line">Welcome to fdisk (util-linux 2.34).</span><br><span class="line">Changes will remain <span class="keyword">in</span> memory only, until you decide to write them.</span><br><span class="line">Be careful before using the write <span class="built_in">command</span>.</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Command (m <span class="keyword">for</span> <span class="built_in">help</span>): d <span class="comment"># 输入d删除现有的分区</span></span><br><span class="line">Partition number (1,2, default 2): <span class="comment"># 默认删除最后一个分区，在第5步中我们看到现有的Linux系统分区是/dev/sda2，所以这里删除的是编号为2的分区（注意看Type，不要删错分区，只删需要扩充的分区）</span></span><br><span class="line"></span><br><span class="line">Partition 2 has been deleted.</span><br><span class="line"></span><br><span class="line">Command (m <span class="keyword">for</span> <span class="built_in">help</span>): p <span class="comment"># 这里查看一下是不是没有我们删掉的分区了</span></span><br><span class="line">Disk /dev/sda: 200 GiB, 214748364800 bytes, 419430400 sectors</span><br><span class="line">Disk model: Virtual disk    </span><br><span class="line">Units: sectors of 1 * 512 = 512 bytes</span><br><span class="line">Sector size (logical/physical): 512 bytes / 512 bytes</span><br><span class="line">I/O size (minimum/optimal): 512 bytes / 512 bytes</span><br><span class="line">Disklabel <span class="built_in">type</span>: gpt</span><br><span class="line">Disk identifier: B1D5268C-61B9-4C12-B04D-CB42CCD09229</span><br><span class="line"></span><br><span class="line">Device     Start   End Sectors Size Type</span><br><span class="line">/dev/sda1   2048  4095    2048   1M BIOS boot</span><br><span class="line"></span><br><span class="line">Command (m <span class="keyword">for</span> <span class="built_in">help</span>): n <span class="comment"># 创建新分区</span></span><br><span class="line">Partition number (2-128, default 2): <span class="comment"># 默认编号即可</span></span><br><span class="line">First sector (4096-419430366, default 4096): <span class="comment"># 默认起始位置</span></span><br><span class="line">Last sector, +/-sectors or +/-size&#123;K,M,G,T,P&#125; (4096-419430366, default 419430366): <span class="comment"># 默认结束位置</span></span><br><span class="line"></span><br><span class="line">Created a new partition 2 of <span class="built_in">type</span> <span class="string">&#x27;Linux filesystem&#x27;</span> and of size 200 GiB.</span><br><span class="line">Partition <span class="comment">#2 contains a ext4 signature.</span></span><br><span class="line"></span><br><span class="line">Do you want to remove the signature? [Y]es/[N]o: n <span class="comment"># 这里选择不删除签名</span></span><br><span class="line"></span><br><span class="line">Command (m <span class="keyword">for</span> <span class="built_in">help</span>): p <span class="comment"># 查看一下新建的分区大小是不是正常，不正常就继续删除分区重新来</span></span><br><span class="line"></span><br><span class="line">Disk /dev/sda: 200 GiB, 214748364800 bytes, 419430400 sectors</span><br><span class="line">Disk model: Virtual disk    </span><br><span class="line">Units: sectors of 1 * 512 = 512 bytes</span><br><span class="line">Sector size (logical/physical): 512 bytes / 512 bytes</span><br><span class="line">I/O size (minimum/optimal): 512 bytes / 512 bytes</span><br><span class="line">Disklabel <span class="built_in">type</span>: gpt</span><br><span class="line">Disk identifier: B1D5268C-61B9-4C12-B04D-CB42CCD09229</span><br><span class="line"></span><br><span class="line">Device     Start       End   Sectors  Size Type</span><br><span class="line">/dev/sda1   2048      4095      2048    1M BIOS boot</span><br><span class="line">/dev/sda2   4096 419430366 419426271  200G Linux filesystem</span><br><span class="line"></span><br><span class="line">Command (m <span class="keyword">for</span> <span class="built_in">help</span>): w <span class="comment"># 写入分区</span></span><br><span class="line">The partition table has been altered.</span><br><span class="line">Syncing disks.</span><br></pre></td></tr></table></figure>
+</li>
+<li>输入 <strong>partprobe /dev/sda</strong> 命令告知系统分区表的变化（这里是告知整块硬盘的分区表变化，所以不需要加编号）。</li>
+<li>输入 <strong>resize2fs /dev/sda2</strong> 命令对文件系统进行扩容（这里选择我们新建的分区）。</li>
+<li>输入 <strong>df -TH</strong> 命令查看扩容的根目录大小是否正常，无问题重启系统即可，有问题则重新进行分区调整操作或还原快照再使用其他教程操作。</li>
+</ol>
+<h2 id="LVM磁盘模式"><a href="#LVM磁盘模式" class="headerlink" title="LVM磁盘模式"></a>LVM磁盘模式</h2><h3 id="参考链接-1"><a href="#参考链接-1" class="headerlink" title="参考链接"></a>参考链接</h3><p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/273daea17b2a">https://www.jianshu.com/p/273daea17b2a</a></p>
+<h3 id="操作步骤-1"><a href="#操作步骤-1" class="headerlink" title="操作步骤"></a>操作步骤</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"># 查看当前磁盘信息</span><br><span class="line">df -TH</span><br><span class="line">lsblk</span><br><span class="line"></span><br><span class="line"># 创建分区</span><br><span class="line">fdisk /dev/vda</span><br><span class="line"></span><br><span class="line">n 新建分区</span><br><span class="line">p 查看新建分区</span><br><span class="line">w 写入分区</span><br><span class="line"></span><br><span class="line"># 刷新分区</span><br><span class="line">partprobe /dev/vda</span><br><span class="line"></span><br><span class="line"># 创建物理卷</span><br><span class="line">pvcreate /dev/vda5</span><br><span class="line"></span><br><span class="line"># 查看卷组名称，以及卷组使用情况</span><br><span class="line">vgdisplay</span><br><span class="line"></span><br><span class="line"># 将物理卷扩展到卷组，根据上条命令查看pv名字</span><br><span class="line">vgextend klas /dev/vda5</span><br><span class="line"></span><br><span class="line"># 查看当前逻辑卷的空间状态</span><br><span class="line">lvdisplay</span><br><span class="line"></span><br><span class="line"># 将卷组中的空闲空间扩展到根分区逻辑卷，根据上条命令查看路径</span><br><span class="line">lvextend -l +100%FREE /dev/klas/root</span><br><span class="line"></span><br><span class="line"># 刷新根分区</span><br><span class="line">xfs_growfs /</span><br><span class="line"></span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -447,7 +540,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">3</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -460,7 +553,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -513,12 +606,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="站点总字数">0k</span>
+    <span title="站点总字数">3k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">1 分钟</span>
+    <span title="站点阅读时长">3 分钟</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
   </div>
