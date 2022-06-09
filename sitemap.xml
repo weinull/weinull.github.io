@@ -46,7 +46,7 @@
 
   <url>
     <loc>https://weinull.com/</loc>
-    <lastmod>2022-03-14</lastmod>
+    <lastmod>2022-06-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -54,21 +54,21 @@
   
   <url>
     <loc>https://weinull.com/tags/%E8%BD%AF%E8%B7%AF%E7%94%B1/</loc>
-    <lastmod>2022-03-14</lastmod>
+    <lastmod>2022-06-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://weinull.com/tags/Openwrt/</loc>
-    <lastmod>2022-03-14</lastmod>
+    <lastmod>2022-06-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://weinull.com/tags/Linux/</loc>
-    <lastmod>2022-03-14</lastmod>
+    <lastmod>2022-06-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -77,7 +77,7 @@
   
   <url>
     <loc>https://weinull.com/categories/%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2/</loc>
-    <lastmod>2022-03-14</lastmod>
+    <lastmod>2022-06-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
